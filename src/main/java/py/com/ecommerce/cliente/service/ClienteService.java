@@ -9,6 +9,7 @@ public interface ClienteService{
     ClienteEntity findById(Long id);
     ClienteEntity findByEmail(String email);
     List<ClienteEntity> getAll();
-    ClienteEntity saveOrUpdate(ClienteEntity cliente);
+    ClienteEntity createCliente(ClienteEntity cliente) ;
+    ClienteEntity updateCliente(Long id, ClienteEntity cliente) ;
     EliminarClienteRespuestaDto delete(Long id);
 }
