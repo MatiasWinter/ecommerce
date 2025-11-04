@@ -1,0 +1,14 @@
+package py.com.ecommerce.cliente.service;
+
+import py.com.ecommerce.cliente.DTO.EliminarClienteRespuestaDto;
+import py.com.ecommerce.cliente.entity.ClienteEntity;
+
+import java.util.List;
+
+public interface ClienteService{
+    ClienteEntity findById(Long id);
+    ClienteEntity findByEmail(String email);
+    List<ClienteEntity> getAll();
+    ClienteEntity saveOrUpdate(ClienteEntity cliente);
+    EliminarClienteRespuestaDto delete(Long id);
+}
