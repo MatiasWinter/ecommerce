@@ -67,7 +67,7 @@ public class ClienteServiceImpl implements ClienteService{
     public ClienteEntity updateCliente(Long id, ClienteEntity clienteRequest) {
         ClienteEntity cliente = clienteRepository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Cliente con ID " + id + " no existe para actualizar."));
-        log.info("Procedemos a actualizar el cliente {}", cliente.getIdCliente());
+        log.info("Procedemos a actualizar el cliente {}", id);
         cliente.setIdCliente(id);
         return clienteRepository.save(cliente);
     }
