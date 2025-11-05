@@ -1,4 +1,4 @@
-package py.com.ecommerce.cliente.Controller;
+package py.com.ecommerce.cliente.controller;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -22,7 +22,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/cliente")
 @AllArgsConstructor
-@Tag(name = "Cliente", description = "Operaciones CRUD para la tabla cliente")
+@Tag(name = "Cliente", description = "Controlador que gestiona las operaciones relacionadas con los productos del sistema.")
 public class ClienteController {
 
     private final ClienteService clienteService;
