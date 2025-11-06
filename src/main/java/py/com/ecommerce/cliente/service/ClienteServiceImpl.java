@@ -65,26 +65,10 @@ public class ClienteServiceImpl implements ClienteService{
 
 
     public ClienteEntity updateCliente(Long id, ClienteEntity clienteRequest) {
-        ClienteEntity cliente = clienteRepository.findById(id)
+        clienteRepository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Cliente con ID " + id + " no existe para actualizar."));
         log.info("Procedemos a actualizar el cliente {}", id);
-        cliente.setIdCliente(id);
-        return clienteRepository.save(cliente);
-    }
-
-    @Override
-    public EliminarClienteRespuestaDto delete(Long id) {
-        if (!clienteRepository.existsById(id))  throw new ResponseStatusException(HttpStatus.NOT_FOUND, "El cliente con ID " + id + " no existe.");
-        try {
-            log.info("Procedemos a eliminar el cliente con id {}", id);
-            clienteRepository.deleteById(id);
-            log.info("Cliente con id {} eliminado exitosamente.", id);
-
-            return new EliminarClienteRespuestaDto(true, "El cliente con ID " + id + " ha sido eliminado correctamente.");
-
-        } catch (Exception e) {
-            log.error("Error al intentar eliminar cliente con ID: {}", id, e);
-            return new EliminarClienteRespuestaDto(false, "No se pudo eliminar el cliente" + e.getMessage());
-        }
+        clienteRequest.setIdCliente(id);
+        return clienteRepository.save(clienteRequest);
     }
 }

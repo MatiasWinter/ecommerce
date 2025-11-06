@@ -11,5 +11,4 @@ public interface ClienteService{
     List<ClienteEntity> getAll();
     ClienteEntity createCliente(ClienteEntity cliente) ;
     ClienteEntity updateCliente(Long id, ClienteEntity cliente) ;
-    EliminarClienteRespuestaDto delete(Long id);
 }
