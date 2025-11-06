@@ -46,6 +46,8 @@ public class ProductoController {
         return productoService.findById(id);
     }
 
+
+
     @Operation(
             summary = "Crea un nuevo producto",
             description = "Registra un nuevo producto en el sistema."

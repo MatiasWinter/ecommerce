@@ -70,12 +70,4 @@ public class ClienteController {
             @RequestBody ClienteEntity cliente) {
         return clienteService.updateCliente(id, cliente);
     }
-
-    @Operation(summary = "Eliminar un cliente por ID")
-    @DeleteMapping("/{id}")
-    public EliminarClienteRespuestaDto delete(
-            @Parameter(description = "ID del cliente a eliminar", example = "6")
-            @PathVariable Long id) {
-        return clienteService.delete(id);
-    }
 }

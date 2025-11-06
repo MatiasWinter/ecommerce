@@ -38,7 +38,7 @@ public class ProductoServiceImpl implements ProductoService{
 
     @Override
     public ProductoEntity update(Long id, ProductoEntity producto) {
-        ProductoEntity productoEntity = productoRepository.findById(id)
+        productoRepository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Producto con ID " + id + " no existe para actualizar."));
         log.info("Procedemos a actualizar el producto {}", id);
         producto.setIdProducto(id);
