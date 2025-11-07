@@ -12,8 +12,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import py.com.ecommerce.cliente.DTO.EliminarClienteRespuestaDto;
 import py.com.ecommerce.cliente.entity.ClienteEntity;
 import py.com.ecommerce.cliente.service.ClienteService;
 

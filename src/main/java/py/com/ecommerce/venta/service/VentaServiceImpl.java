@@ -38,7 +38,7 @@ public class VentaServiceImpl implements VentaService{
             return restClient.post().uri(URL_SELL).body(ventaRequestDto).retrieve().body(VentaResponseDto.class);
         } catch (RestClientException e) {
             log.error("Error al llamar al servicio de ventas: {}", e.getMessage());
-            throw e;
+            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR," Error al llamar al componentes de ventas " + e.getMessage());
         }
     }
 }

@@ -1,6 +1,5 @@
 package py.com.ecommerce.cliente.service;
 
-import py.com.ecommerce.cliente.DTO.EliminarClienteRespuestaDto;
 import py.com.ecommerce.cliente.entity.ClienteEntity;
 
 import java.util.List;
