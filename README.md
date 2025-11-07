@@ -31,8 +31,11 @@ El sistema está dividido en dos microservicios:
 
 ## Para levantar el proyecto es necesario que tengas 
 -Java 21
+
 -Maven 3.9+
+
 -PostgreSQL en ejecución
+
 -RabbitMQ (Docker)
 
 
