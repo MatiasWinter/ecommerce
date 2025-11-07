@@ -1,19 +1,18 @@
-package py.com.ecommerce.venta.DTO;
+package py.com.ecommerce.pago.DTO;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.math.BigDecimal;
+import py.com.ecommerce.pago.enums.TIPO_MEDIO_PAGO;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Setter
 @Getter
-public class VentaResponseDto {
+@Setter
+public class PagoRequestDto {
     private Long idVenta;
-    private BigDecimal montoTotal;
+    private TIPO_MEDIO_PAGO tipoMedioPago;
 }
